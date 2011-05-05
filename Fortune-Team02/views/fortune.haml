@@ -1,0 +1,9 @@
+!!! 5
+
+%html{:lang => "en"}
+    %head
+        %title Fortune
+    %body
+        - if(@fortune)
+            .fortune
+                = @fortune
