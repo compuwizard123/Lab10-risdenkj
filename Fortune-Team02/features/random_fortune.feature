@@ -6,3 +6,8 @@ Feature: Random fortune
 		 Scenario: Get a fortune
 		 		   Given I am on fortunes
 				   Then I should see a fortune
+
+		 Scenario: Get a new fortune
+		 		   Given I am on fortunes
+				   When I press "New Fortune"
+				   Then I should see a fortune
