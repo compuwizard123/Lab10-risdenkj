@@ -3,6 +3,10 @@ require 'haml'
 require 'thin'
 
 class Fortune < Sinatra::Base
+  get '/' do
+    redirect '/fortune/random'
+  end
+  
   get '/fortune/random/?' do
     @fortune = $fortunes[rand($fortunes.size)]
     haml :fortune
